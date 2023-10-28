@@ -1,0 +1,16 @@
+.Counter {
+    width: 8rem;
+    margin: 0 auto;
+}
+.Controls {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-block: 0.2rem;
+}
+.btn {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
