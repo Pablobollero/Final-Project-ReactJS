@@ -3,10 +3,10 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import ItemCount from '../ItemCount/ItemCount'
 import Typography from '@mui/material/Typography';
 
-const Item = ({title, img, price, stock}) => {
+const ItemDetail = ({title, img, description, price, stock}) => {
     return (
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -17,6 +17,11 @@ const Item = ({title, img, price, stock}) => {
             <Typography gutterBottom variant="h5" component="div">
             {title}
             </Typography>
+            <Typography variant="body2" color="warning.light">
+            {description}
+            </Typography>
+        </CardContent>
+        <CardContent>    
             <Typography variant="body2" color="text.secondary">
             Precio: £{price}
             </Typography>
@@ -25,10 +30,10 @@ const Item = ({title, img, price, stock}) => {
             </Typography>
         </CardContent>
         <CardActions>
-            <Button size="small">Ver Descripcion</Button>
+        <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
         </CardActions>
         </Card>
     )
-};    
+};
 
-export default Item;
+export default ItemDetail;

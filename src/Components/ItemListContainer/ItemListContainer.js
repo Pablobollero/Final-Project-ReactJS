@@ -20,7 +20,9 @@ const ItemListContainer = ({ greeting }) => {
             <h1>
                 { greeting }
             </h1>
+            <div>
             <ItemList productos={productos} />
+            </div>
         </div>
     );
 };
