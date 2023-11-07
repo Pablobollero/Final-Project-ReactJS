@@ -11,12 +11,10 @@ function App() {
       <ItemListContainer greeting={"Bienvenidos a Roll Up!!"}/>
       <div>
         <ItemDetailContainer />
+        <h1>asd</h1>
       </div>
     </div>
   );
 };
 
 export default App;
-
-
-// Pablo se la re come
