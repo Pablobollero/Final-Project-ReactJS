@@ -5,11 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
-const Item = ({title, img, price, stock}) => {
+const Item = ({id, title, img, price, stock}) => {
     return (
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
+            component="img"
             sx={{ height: 140 }}
             image={img}
         />
@@ -25,7 +27,7 @@ const Item = ({title, img, price, stock}) => {
             </Typography>
         </CardContent>
         <CardActions>
-            <Button size="small">Ver Descripcion</Button>
+            <Link to={`/item/${id}`} className='Option'><Button size="small">Ver Descripcion</Button></Link>
         </CardActions>
         </Card>
     )

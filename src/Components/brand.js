@@ -1,7 +1,7 @@
 const Brand = () => {
     return (
         // eslint-disable-next-line
-        <a className="navbar-brand" href="#">Roll Up</a>
+        <h1 className="navbar-brand" href="#">Roll Up</h1>
     );
 };
 

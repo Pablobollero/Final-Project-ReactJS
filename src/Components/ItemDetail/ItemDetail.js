@@ -6,11 +6,12 @@ import CardMedia from '@mui/material/CardMedia';
 import ItemCount from '../ItemCount/ItemCount'
 import Typography from '@mui/material/Typography';
 
-const ItemDetail = ({title, img, description, price, stock}) => {
+const ItemDetail = ({img, title, description, price, stock}) => {
     return (
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
-            sx={{ height: 140 }}
+            component="img"
+            sx={{ height: 345 }}
             image={img}
         />
         <CardContent>
