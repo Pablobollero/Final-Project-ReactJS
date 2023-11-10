@@ -1,6 +1,6 @@
 const productos = [
     {
-      id: '1',
+      id: 1,
       title: 'Classic Roll',
       img: '../img/classic.jpg',
       description: 'Un clásico cinamón roll con la mezcla perfecta de canela y azúcar, envuelto en una masa suave y horneado a la perfección. Ideal para los amantes del sabor tradicional.',
@@ -16,7 +16,7 @@ const productos = [
       stock: 5
     },
     {
-      id: '3',
+      id: 3,
       title: 'Pistacho Roll',
       img: '../img/pistacho.jpg',
       description: 'Este cinamón roll está lleno de pistachos tostados y triturados, lo que le da un delicioso sabor y un toque de textura crujiente. Perfecto para los amantes de los frutos secos.',
@@ -43,8 +43,9 @@ const productos = [
 
   export const getProductsById = (productosId) => {
     return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(productos.find(prod => prod.id === productosId))
-        }, 2000)
-    })
-  }
+      setTimeout(() => {
+        const foundProduct = productos.find(prod => prod.id === productosId);
+        resolve(foundProduct ? [foundProduct] : []);
+      }, 2000);
+    });
+  };
