@@ -3,12 +3,14 @@ import './App.css';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import NavBar from './Components/NavBar';
+import { CartProvider } from './Components/Context/CartContext';
 
 
 function App() {
   return (
     <div className="text-center">
       <BrowserRouter>
+        <CartProvider>
         <NavBar />
         <Routes>
         <Route path='/' element={<ItemListContainer greetings="BIENVENIDOS A ROLL UP!"/>}/>
@@ -16,6 +18,7 @@ function App() {
         <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
         <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
       </Routes>
+      </CartProvider>
       </BrowserRouter>
     </div>
   );

@@ -4,60 +4,46 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({ greetings }) => {
-  const [productos, setProductos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const { productosId } = useParams();
+    const [productos, setProductos] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { productosId } = useParams(); // Cambiado de categoryId a productosId
 
-  useEffect(() => {
-    console.log("productosId:", productosId);
-
-    const loadProducts = () => {
+    useEffect(() => {
+      console.log("productosId:", productosId);
+      const asyncFunc = productosId === "Nuestros Productos" ? getProducts : getProductsById;
+  
       setLoading(true);
+  
+      asyncFunc(productosId)
+          .then(response => {
+              console.log("Productos cargados:", response);
+              const newProductos = Array.isArray(response) ? response : [];
+              setProductos(newProductos);
+          })
+          .catch(error => {
+              console.error("Error al cargar productos:", error);
+          })
+          .finally(() => {
+              setLoading(false);
+          });
+  }, [productosId]);  
 
-      const asyncFunc =
-        productosId === "Nuestros Productos"
-          ? getProducts
-          : getProductsById;
+    if (loading) {
+        return <p>Cargando productos...</p>;
+    }
 
-      // Convertir a minúsculas antes de usarlo
-      const formattedProductosId = productosId.toLowerCase();
-
-      const productIdsToShow =
-        formattedProductosId === "mas pedidos" ? ["1", "3"] : formattedProductosId;
-
-      asyncFunc(productIdsToShow)
-        .then((response) => {
-          console.log("Productos cargados:", response);
-          const newProductos = Array.isArray(response) ? response : [];
-          setProductos(newProductos);
-        })
-        .catch((error) => {
-          console.error("Error al cargar productos:", error);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    };
-
-    loadProducts();
-  }, [productosId]);
-
-  if (loading) {
-    return <p>Cargando productos...</p>;
-  }
-
-  return (
-    <div>
-      <div className="container fw-bold">
-        {productosId === undefined && <h1>{greetings}</h1>}
-      </div>
-      {(productosId === "Nuestros Productos" || productosId === "mas pedidos") && (
+    return (
         <div>
-          <ItemList productos={productos} />
+            <div className="container fw-bold">
+                <h1>{productosId === "Nuestros Productos" ? "Nuestros Productos" : greetings}</h1>
+            </div>
+            {productosId === "Nuestros Productos" && (
+                <div>
+                    <ItemList productos={productos} />
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default ItemListContainer;

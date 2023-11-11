@@ -5,8 +5,23 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import ItemCount from '../ItemCount/ItemCount'
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../Context/CartContext';
 
-const ItemDetail = ({img, title, description, price, stock}) => {
+const ItemDetail = ({id, img, title, description, price, stock}) => {
+    const [quantityAdded, setQuantityAdded] = React.useState(0)
+
+    const { addItem } = React.useContext(CartContext)
+
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity)
+
+        const item = {
+            id, title, price
+        }
+        addItem(item, quantity)
+    }
+
     return (
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -31,7 +46,13 @@ const ItemDetail = ({img, title, description, price, stock}) => {
             </Typography>
         </CardContent>
         <CardActions>
-        <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
+            {
+                quantityAdded > 0 ? (
+                    <Link to='/cart' className='Option'>Terminar Compra</Link>
+                ) : (
+                    <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
+                )
+            }
         </CardActions>
         </Card>
     )
