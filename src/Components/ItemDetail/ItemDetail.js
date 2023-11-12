@@ -1,10 +1,11 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import ItemCount from '../ItemCount/ItemCount';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetail.css";
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     
@@ -31,7 +32,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
             Stock: {stock}
             </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions className='count'>
             <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad Agregada ', quantity)}/>
         </CardActions>
         </Card>
