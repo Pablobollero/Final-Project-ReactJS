@@ -3,25 +3,11 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import ItemCount from '../ItemCount/ItemCount'
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../Context/CartContext';
+import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ({id, img, title, description, price, stock}) => {
-    const [quantityAdded, setQuantityAdded] = React.useState(0)
-
-    const { addItem } = React.useContext(CartContext)
-
-    const handleOnAdd = (quantity) => {
-        setQuantityAdded(quantity)
-
-        const item = {
-            id, title, price
-        }
-        addItem(item, quantity)
-    }
-
+const ItemDetail = ({id, name, img, category, description, price, stock}) => {
+    
     return (
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -31,7 +17,7 @@ const ItemDetail = ({id, img, title, description, price, stock}) => {
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            {title}
+            {name}
             </Typography>
             <Typography variant="body2" color="warning.light">
             {description}
@@ -46,13 +32,7 @@ const ItemDetail = ({id, img, title, description, price, stock}) => {
             </Typography>
         </CardContent>
         <CardActions>
-            {
-                quantityAdded > 0 ? (
-                    <Link to='/cart' className='Option'>Terminar Compra</Link>
-                ) : (
-                    <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
-                )
-            }
+            <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad Agregada ', quantity)}/>
         </CardActions>
         </Card>
     )

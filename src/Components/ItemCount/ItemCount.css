@@ -1,12 +1,12 @@
-.Counter {
-    width: 8rem;
-    margin: 0 auto;
+.counter {
+    width: 7.9rem;
+    text-align: center;
 }
-.Controls {
+.controls {
     display: inline-flex;
     flex-direction: row;
     gap: 1rem;
-    margin-block: 0.2rem;
+    margin: 0.5rem auto;
 }
 .btn {
     background-color: orange;
