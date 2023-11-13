@@ -1,0 +1,34 @@
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 30rem;
+    border: 1px solid #a9a9a9; /* Borde fino gris oscuro */
+    padding: 20px;
+    border-radius: 10px; /* Puntas redondeadas */
+    background-color: white; /* Fondo blanco para el formulario */
+}
+
+.Label {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Input {
+    width: 20rem;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.Option.btn {
+    margin-top: 10px;
+    width: 6rem;
+}
