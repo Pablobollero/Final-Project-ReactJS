@@ -27,7 +27,7 @@ const Item = ({id, name, img, price, stock}) => {
             </Typography>
         </CardContent>
         <CardActions>
-            <Link to={`/item/${id}`} className='Option' size="small">Ver Detalle</Link>
+            <Link to={`/item/${id}`} className='Button btn btn-sm mx-auto' size="small">Ver Detalle</Link>
         </CardActions>
         </Card>
     )

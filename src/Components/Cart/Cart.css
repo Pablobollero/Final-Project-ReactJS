@@ -16,39 +16,54 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5rem;
+    margin: 17rem auto;
+}
+.pelado{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: orange;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .cart-total {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
-    color:blue;
-    margin-top: 20px;
+    color:green;
+    margin: 1rem auto 2rem auto;
 }
 
-.Button{
-    background-color: red;
-    margin-bottom: 1rem;
+.Button.btn.btn-sm.Limpiar {
+    font-size: 0.76rem;
+    font-weight: bolder;
+    transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease; /* Actualizado para incluir transform */
+    margin: 1rem auto auto 90%;
+    color: red;
+    background-color: lightgrey;
+    transform-origin: center; /* Asegura que la transformación sea con respecto al centro */
+    transform: scale(1); /* Escala inicial */
 }
 
-.checkout-button {
-    background-color: #ff7f50; /* naranja */
+.Button.btn.btn-sm.Limpiar:hover {
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-    width: 100%; /* Opcional: para que los botones ocupen todo el ancho */
+    font-weight: 100;
+    background-color: red;
+    transform: scale(0.5); /* Escala reducida cuando se pasa el mouse por encima */
 }
 
-.cart-button:hover, .checkout-button:hover {
-    background-color: #e6734d; /* un tono más oscuro de naranja */
+
+.Button.btn.btn.btn-sm.Checkout {
+    font-size: 0.75rem; /* Tamaño de fuente inicial */
+    font-weight: bolder; /* Peso de la fuente normal */
+    transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease; /* Transición suave para los cambios */
+    margin-bottom: 1rem;
+    color: white;
+    background-color: orange;
 }
 
-.checkout-button {
-    display: block;
-    width: 100%;
-    text-align: center;
+.Button.btn.btn.btn-sm.Checkout:hover {
+    color: white; /* Cambio de color cuando el mouse está sobre el botón */
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    background-color:green;
 }
