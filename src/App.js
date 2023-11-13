@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
-//import Landing from "./Components/Landing/Landing";
+import Landing from "./Components/Landing/Landing";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./Components/Context/CartContext";
@@ -13,7 +13,8 @@ function App() {
         <CartProvider>
           <NavBar />
           <Routes>
-            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/' element={<Landing greeting={'Bienvenidos a '} companyName={'Roll Up!'} about={'Tu pasteleria online.'} queHacemos={'Somos un pequeno emprendimiento familiar avocado a crear los mas fascinantes rolls de canela con los sabores mas particulares que te puedas imaginar.'} />} />
+            <Route path='/productos' element={<ItemListContainer />} />
             <Route path='/category/:categoryId' element={<ItemListContainer />} />
             <Route path='/item/:itemId' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
@@ -26,6 +27,3 @@ function App() {
 }
 
 export default App;
-/*
-<Route path='/' element={<Landing greeting={'Bienvenidos a '} companyName={'Roll Up!'} about={'Tu pasteleria online.'} queHacemos={'Somos un pequeno emprendimiento familiar avocado a crear los mas fascinantes rolls de canela con los sabores mas particulares que te puedas imaginar.'} />} />
-*/
