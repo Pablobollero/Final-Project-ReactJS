@@ -3,6 +3,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 import BurgerMenu from "./BurgerMenu";
 
+
 const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,7 +20,9 @@ const NavBar = () => {
                     <li className="nav-item">
                         <NavLink to={`/category/recomendados`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Recomendados</NavLink>
                     </li>
-                    {/* Puedes agregar más elementos de lista aquí si lo necesitas */}
+                    <li className="nav-item">
+                        <NavLink to={`/contacto`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contacto</NavLink>
+                    </li>
                 </ul>
                 <div className="ms-auto">
                     <CartWidget />
