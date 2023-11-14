@@ -3,12 +3,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f2f2f2; /* gris claro */
-    padding: 20px;
-    border-radius: 8px;
+    padding: 50px;
     text-align: center;
     width: fit-content;
-    margin: auto; /* Esto ayuda a centrar también en el eje horizontal */
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bodyCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://img.freepik.com/free-photo/delicious-cinnamon-rolls-with-copy-space_23-2148779698.jpg?w=1380&t=st=1699993106~exp=1699993706~hmac=cae17df5c7ffd81b6a160505031bc19a7d1f81506cc0624b3cf2471494ca53bb');
+    background-size: cover;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .empty{
@@ -21,7 +31,7 @@
 .pelado{
     font-size: 2rem;
     font-weight: bolder;
-    color: orange;
+    color: white;
     text-align: center;
     margin-bottom: 3rem;
 }

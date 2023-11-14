@@ -1,0 +1,37 @@
+.landing {
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-photo/top-view-delicious-cinnamon-rolls-concept_23-2148779663.jpg?w=1380&t=st=1699991292~exp=1699991892~hmac=42fac4abeccfacaaf870cfdcd8b4e74bb653ac3776da598ab631b2333b9867ae');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.companyName {
+    font-size: 10rem; 
+    font-weight: bolder;
+    letter-spacing: 2rem;
+    margin: 3rem;
+}
+
+.greeting {
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+.about {
+    margin: 5rem;
+    font-size: 2rem;
+}
+
+.queHacemos {
+    font-size: 1.20rem;
+    letter-spacing: 0.25rem;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    border-radius: 6rem;
+}

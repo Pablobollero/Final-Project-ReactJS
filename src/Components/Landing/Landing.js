@@ -1,12 +1,12 @@
-//import './Landing.css';
+import './Landing.css';
 
 const Landing = ({greeting, companyName, about, queHacemos}) => {
     return(
         <div className="landing">
-            <h2>{greeting}</h2>
-            <h1>{companyName}</h1>
-            <h3>{about}</h3>
-            <p>{queHacemos}</p>
+            <h2 className='greeting'>{greeting}</h2>
+            <h1 className='companyName'>{companyName}</h1>
+            <h3 className='about'>{about}</h3>
+            <p className='queHacemos'>{queHacemos}</p>
         </div>
     )
 }

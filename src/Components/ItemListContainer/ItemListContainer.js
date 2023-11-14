@@ -12,6 +12,15 @@ const ItemListContainer = ({title}) => {
     
     const { categoryId } = useParams()
 
+    const titleStyle = {
+        fontSize: '3rem',
+        fontWeight: 'bolder',
+        color: 'whitesmoke',
+        textAlign: 'center',
+        marginTop: '10rem',
+        marginBottom: '-10rem'
+    };
+
     useEffect(() => {
         setLoading(true)
 
@@ -36,7 +45,9 @@ const ItemListContainer = ({title}) => {
     }, [categoryId])
 
     return (
-        <div>
+        <div className="itemListContainer">
+            {categoryId === 'recomendados' && <h1 style={titleStyle}>Recomendados</h1>}
+            {categoryId === 'masPedido' && <h1 style={titleStyle}>Más Pedidos</h1>}
             <h1 className="title">{title}</h1>
             <div className="listaDeItems">
             {loading ? <p>Cargando...</p> : <ItemList products={product}/>}

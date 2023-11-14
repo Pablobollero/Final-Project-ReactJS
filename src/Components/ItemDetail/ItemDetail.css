@@ -1,3 +1,19 @@
+.ItemDetailContainer{
+    background-image: url('https://img.freepik.com/free-photo/delicious-cinnamon-rolls-with-copy-space_23-2148779698.jpg?w=1380&t=st=1699993106~exp=1699993706~hmac=cae17df5c7ffd81b6a160505031bc19a7d1f81506cc0624b3cf2471494ca53bb');
+    margin-top: -0.05rem;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.ItemDetail{
+width: fit-content;
+margin-top: 14rem;
+}
+
+
 .terminarCompra {
     width: 9rem;
     margin: 0.5rem auto;

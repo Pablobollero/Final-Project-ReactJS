@@ -6,7 +6,7 @@ import BurgerMenu from "./BurgerMenu";
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light nAAvbar">
             <Link to='/' className="navbar-brand fs-1">Roll Up!</Link>
             <BurgerMenu />
             <div className="collapse navbar-collapse" id="navbarSupportedContent">

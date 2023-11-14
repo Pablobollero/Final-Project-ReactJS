@@ -13,11 +13,14 @@
     border: 1px solid #a9a9a9; /* Borde fino gris oscuro */
     padding: 20px;
     border-radius: 10px; /* Puntas redondeadas */
-    background-color: white; /* Fondo blanco para el formulario */
+    background-color: rgb(255, 255, 255, 0.1);
 }
 
 .Label {
     margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: white;
     display: flex;
     flex-direction: column;
 }

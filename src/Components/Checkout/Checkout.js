@@ -84,31 +84,33 @@ const Checkout = () => {
     };
 
     if (loading) {
-        return <h1>Se está generando su orden...</h1>;
+        return <h1 className="checkOutContainer text-white">Se está generando su orden...</h1>;
     }
 
     if (orderId) {
-        return <h1>El id de su orden es: {orderId}</h1>; // Mostrar el ID de la orden
+        return <h1 className="checkOutContainer text-white">El id de su orden es: {orderId}</h1>; // Mostrar el ID de la orden
     }
 
     if (outOfStockItems.length > 0) {
         return (
             <div>
-                <h1>Productos fuera de stock:</h1>
+                <h1 className="checkOutContainer text-white">Productos fuera de stock:</h1>
                 <ul>
                     {outOfStockItems.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
-                <button onClick={() => window.location.reload()}>Volver al Carrito</button>
+                <button onClick={() => window.location.reload()} className="checkOutContainer text-white">Volver al Carrito</button>
             </div>
         );
     }
 
     return (
-        <div>
+        <div className="checkOutContainer">
+            <div>
             <h1 className="checkout">Checkout</h1>
             <CheckoutForm onConfirm={createOrder} />
+            </div>
         </div>
     );
 };

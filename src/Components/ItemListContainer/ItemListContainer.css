@@ -1,11 +1,18 @@
-.title{
-    font-size: 2rem;
+.title {
+    font-size: 3rem;
     font-weight: bolder;
-    color: orange;
+    color: whitesmoke;
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 10rem;
 }
 
-.listaDeItems{
+
+.itemListContainer{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/024/533/426/non_2x/cinnamon-rolls-illustration-ai-generative-free-photo.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
     display: flex;
+    align-items: center;
+    flex-direction: column;
 }

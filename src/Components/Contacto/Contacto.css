@@ -1,14 +1,16 @@
 .contact-container {
     max-width: 1000px;
-    margin: 5rem auto;
+    margin: 0 auto;
     padding: 40px 20px;
     font-family: 'Arial', sans-serif;
+    text-align: center;
 }
 
-.contact-title {
-    font-size: 36px;
+.subTitle {
+    font-size: 3rem;
     text-align: center;
-    color: #333;
+    color: orange;
+    font-weight: bolder;
     margin: 5rem auto;
 }
 
@@ -16,29 +18,36 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .contact-section {
     margin: 10px;
     padding: 20px;
-    flex-basis: 45%; /* Ajustar según el diseño de la imagen y el espacio disponible */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 1); /* Sombra naranja */
+    background-color: rgba(248, 248, 248, 0.9); /* Fondo 50% transparente */
+    border-radius: 5rem;
     text-align: center;
+    flex-basis: calc(33% - 20px); /* Ajusta el ancho para 3 columnas */
 }
 
-.contact-section h3 {
-    color: #306060;
+.contact-section .subSubtitle {
+    color: orange;
     margin-bottom: 10px;
 }
 
-.contact-section p {
-    color: #333;
+.contact-section .parrafoContacto {
+    color: #000;
+    font-weight: bold;
     line-height: 1.6;
 }
 
-/* Asegúrate de incluir media queries para hacerla responsiva si es necesario */
+@media (max-width: 1024px) {
+    .contact-section {
+        flex-basis: calc(50% - 20px); /* 2 columnas en pantallas medianas */
+    }
+}
+
 @media (max-width: 768px) {
     .contact-details {
         flex-direction: column;
@@ -46,31 +55,7 @@
     }
 
     .contact-section {
-        flex-basis: 80%;
+        flex-basis: 80%; /* 1 columna en pantallas pequeñas */
         margin-bottom: 20px;
-    }
-}
-
-.contact-section {
-    margin: 10px;
-    padding: 20px;
-    flex-basis: calc(33% - 20px); /* Ajusta el ancho para 3 columnas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 8px;
-}
-
-/* Ajustes para que las tarjetas se vean bien en dispositivos móviles */
-@media (max-width: 768px) {
-    .contact-section {
-        flex-basis: 80%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Opcional: si necesitas que en pantallas medianas se muestren 2 columnas */
-@media (max-width: 1024px) {
-    .contact-section {
-        flex-basis: calc(50% - 20px);
     }
 }

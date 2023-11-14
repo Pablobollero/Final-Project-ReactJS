@@ -2,7 +2,7 @@
 
 .ListGroup {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantalla grande */
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 4rem;
     margin: 0 auto;
