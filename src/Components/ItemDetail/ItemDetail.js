@@ -25,7 +25,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     }
 
     return (
-        <Card className="card" sx={{  maxWidth: 345, borderRadius: '9rem', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', backgroundColor: '#f3f3f3' }}>
+        <Card className="cardDetail" sx={{  maxWidth: 345, borderRadius: '9rem', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', backgroundColor: '#f3f3f3' }}>
             <CardMedia
                 component="img"
                 sx={{ height: 345 }}

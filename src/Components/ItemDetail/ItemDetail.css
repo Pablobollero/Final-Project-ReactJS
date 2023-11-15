@@ -7,6 +7,10 @@
     min-width: 100vw;
     min-height: 100vh;
 }
+.cardDetail{
+    margin-top: 13rem;
+    height: fit-content;
+}
 
 .ItemDetail{
 width: fit-content;
