@@ -12,7 +12,7 @@ import Contacto from "./Components/Contacto/Contacto";
 function App() {
   return(
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/proyectofinal_react_pablobollero">
         <CartProvider>
           <NavBar />
           <Routes>
