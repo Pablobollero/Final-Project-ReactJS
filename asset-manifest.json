@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/proyectofinal_react_pablobollero/static/css/main.9cb10e88.css",
+    "main.js": "/proyectofinal_react_pablobollero/static/js/main.a9cb7fcb.js",
+    "static/js/787.fd29ab7d.chunk.js": "/proyectofinal_react_pablobollero/static/js/787.fd29ab7d.chunk.js",
+    "index.html": "/proyectofinal_react_pablobollero/index.html",
+    "static/media/cart.svg": "/proyectofinal_react_pablobollero/static/media/cart.c7695649fdc87f4c9aaca822519e0255.svg",
+    "main.9cb10e88.css.map": "/proyectofinal_react_pablobollero/static/css/main.9cb10e88.css.map",
+    "main.a9cb7fcb.js.map": "/proyectofinal_react_pablobollero/static/js/main.a9cb7fcb.js.map",
+    "787.fd29ab7d.chunk.js.map": "/proyectofinal_react_pablobollero/static/js/787.fd29ab7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cb10e88.css",
+    "static/js/main.a9cb7fcb.js"
+  ]
+}
